@@ -4,20 +4,13 @@ import math
 
 print("----sayı randomlama ve istatistiksel hesaplamalar------")
 
-a=random.randint(1,1000)
-b=random.randint(1,1000)
-c=random.randint(1,1000)
-d=random.randint(1,1000)
-e=random.randint(1,1000)
-f=random.randint(1,1000)
-g=random.randint(1,1000)
-h=random.randint(1,1000)
-i=random.randint(1,1000)
-j=random.randint(1,1000)
-sayilar=[a,b,c,d,e,f,g,h,i,j]
+sayilar =[]
+for i in range(100):
+    rastgele_sayi=random.randint(1,1000)
+    sayilar.append(rastgele_sayi)
 print("rastgele sayılar:..",sayilar)
 print("----toplam,ortalama,min,max hesaplama-----")
-toplam=a+b+c+d+e+f+g+h+i+j
+toplam=sum(sayilar)
 ortalama=toplam/10
 minimum = sayilar[0]
 maksimum = sayilar[0]
@@ -65,3 +58,4 @@ for sayi in sayilar:
     varyans =farkların_karesi_toplamı / (n-1)
     standart_sapma=math.sqrt(varyans)
 print("standart sapma:...",standart_sapma)
+
